@@ -1,50 +1,64 @@
-# Welcome to your Expo app 👋
+# TelkiHub - Clean Expo App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A clean, ready-to-develop Expo React Native app with cross-platform support for Android, iOS, and Web.
 
-## Get started
+## Quick Start
 
-1. Install dependencies
-
+1. **Install dependencies**
    ```bash
    npm install
    ```
 
-2. Start the app
-
+2. **Start development**
    ```bash
-   npx expo start
+   npm start          # Choose platform
+   npm run android    # Android
+   npm run web        # Web browser
+   npm run ios        # iOS (macOS only)
    ```
 
-In the output, you'll find options to open the app in a
+3. **For external devices**
+   ```bash
+   npm run tunnel     # Use tunnel for remote testing
+   ```
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## Project Structure
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+```
+app/
+├── (tabs)/
+│   ├── index.tsx      # Home screen - edit this first
+│   └── explore.tsx    # Second tab screen
+├── _layout.tsx        # Root layout
+└── modal.tsx          # Example modal
 
-## Get a fresh project
+components/            # Reusable components
+├── themed-text.tsx
+├── themed-view.tsx
+└── ui/               # UI components
 
-When you're ready, run:
-
-```bash
-npm run reset-project
+constants/
+└── theme.ts          # Colors and styling
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Start Building
 
-## Learn more
+- **Main screen:** `app/(tabs)/index.tsx` - Your app's home screen
+- **Second screen:** `app/(tabs)/explore.tsx` - Additional content
+- **Add new screens:** Create files in `app/` directory
+- **Components:** Add reusable components in `components/`
+- **Styling:** Modify themes in `constants/theme.ts`
 
-To learn more about developing your project with Expo, look at the following resources:
+## Development
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+- File-based routing (add `.tsx` files in `app/` folder)
+- Hot reloading enabled
+- TypeScript support
+- Cross-platform components included
+- Dark/light theme support
 
-## Join the community
+## Resources
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+- [Expo Documentation](https://docs.expo.dev/)
+- [React Native Documentation](https://reactnative.dev/)
+- [File-based Routing](https://docs.expo.dev/router/introduction/)
