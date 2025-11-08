@@ -1,9 +1,0 @@
-{ 
-  "recommendations": [
-    "expo.vscode-expo-tools",
-    "msjsdiag.vscode-react-native",
-    "bradlc.vscode-tailwindcss",
-    "esbenp.prettier-vscode",
-    "ms-vscode.vscode-typescript-next"
-  ]
-}

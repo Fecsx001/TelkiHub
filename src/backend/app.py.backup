@@ -1,0 +1,23 @@
+from fastapi import FastAPI
+from routers.routes import router as routes_router
+from datetime import datetime
+from utils.logger import initialize_log
+
+
+"""uvicorn app:app --reload --port 9000"""
+
+
+configuration_time = datetime.now().strftime("%Y%m%d%H%M%S")
+# Logging
+initialize_log(log_file="test_dev_tools.log", log_version=configuration_time)
+
+app = FastAPI()
+app.include_router(routes_router)
+
+
+@app.get("/")
+def route():
+    return {"Welcome in TelkiHub"}
+
+
+# @routers.post('/adduser', response_model=User)
