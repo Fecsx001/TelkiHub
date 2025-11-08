@@ -3,7 +3,7 @@ import datetime
 from fastapi import HTTPException, APIRouter
 from fastapi.responses import JSONResponse
 from utils.logger import log_io
-from data.filehandler import get_relevan, add_item
+from data.filehandler import get_relevant, add_item
 
 
 # Assuming your API keys are in a file named config.py
@@ -149,11 +149,16 @@ def get_time_to_kelen():
 
 @router.get("/getrelevant")
 def get_relevant_data():
-    data = get_relevant_data()
+    data = get_relevant()
     return JSONResponse(content=data, status_code=200)
 
 
 @router.post("/additem")
 def add_item_to_list(prio: str, title: str, text: str, relevant_until: str):
     if datetime.datetime.now() < datetime.datetime.fromisoformat(relevant_until):
-        add_item(prio=prio, title=title, text=text, relevant_until=relevant_until)
+        try:
+            add_item(prio=prio, title=title, text=text, relevant_until=relevant_until)
+            return JSONResponse(status_code=201, content="Event added succesfully")
+        except Exception as e:
+            raise HTTPException(status_code=400, detail=str(e))
+        

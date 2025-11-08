@@ -21,7 +21,7 @@ def _parse_datetime_string(date_string: str) -> datetime.datetime:
     return datetime.datetime.fromisoformat(date_string)
 
 
-def get_relevan():
+def get_relevant():
     data = _load_json()
     re = {"high": [], "normal": []}
     current_time = datetime.datetime.now()
