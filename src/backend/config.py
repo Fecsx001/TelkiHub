@@ -11,6 +11,7 @@ DEBUG = os.getenv("DEBUG", "True").lower() == "true"
 
 # TomTom API Configuration
 TOMTOM_API_KEY = os.getenv("TOMTOM_API_KEY")
+GOOGLE_MAPS_API_KEY = os.getenv("GOOGLE_MAPS_API_KEY")
 
 # Security Configuration
 SECRET_KEY = os.getenv("SECRET_KEY", "your-secret-key-change-in-production")
