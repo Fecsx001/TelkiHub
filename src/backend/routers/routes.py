@@ -3,6 +3,7 @@ import datetime
 from fastapi import HTTPException, APIRouter
 from fastapi.responses import JSONResponse
 from utils.logger import log_io
+from data.filehandler import get_relevan, add_item
 
 
 # Assuming your API keys are in a file named config.py
@@ -137,10 +138,22 @@ def get_time_to_kelen():
         else:
             raise HTTPException(
                 status_code=response.status_code,
-                detail=f"TomTom API error: {response.text}",
+                detail=f"Google API error: {response.text}",
             )
 
     except requests.RequestException as e:
         raise HTTPException(status_code=500, detail=f"Network error: {str(e)}")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+
+@router.get("/getrelevant")
+def get_relevant_data():
+    data = get_relevant_data()
+    return JSONResponse(content=data, status_code=200)
+
+
+@router.post("/additem")
+def add_item_to_list(prio: str, title: str, text: str, relevant_until: str):
+    if datetime.datetime.now() < datetime.datetime.fromisoformat(relevant_until):
+        add_item(prio=prio, title=title, text=text, relevant_until=relevant_until)

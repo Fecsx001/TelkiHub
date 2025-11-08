@@ -1,0 +1,43 @@
+{
+  "high": [
+    {
+      "id": 1,
+      "title": "Áramszünet",
+      "text": "❗️November 19-én karbantartási munkálatokat végez az ELMŰ Telkiben, amely miatt az egész településen áramszünet lesz❗️",
+      "link": "https://telki.hu/index.php/hircikk/4001-egesz-telkit-erinto-aramszunet?fbclid=IwY2xjawN8L6hleHRuA2FlbQIxMABicmlkETFIYWk5YjdHUDBKSTFablowc3J0YwZhcHBfaWQQMjIyMDM5MTc4ODIwMDg5MgABHv08082R_Q4MEgEQT1IpNb-UyNekecr6VpJ3UGlodIj5_GAokWmfY8fWAU7V_aem_xNIa8QfaKukthZsRecjoLw",
+      "uploaded": "2025-11-06T08:58:30",
+      "relevant_until": "2025-11-20T00:00:00"
+    },
+    {
+      "id": 2,
+      "title": "almafa",
+      "text": "almafa almafa\nalmafa",
+      "uploaded": "20251108T154549",
+      "relevant_until": "2024-10-10T00:00:00"
+    },
+    {
+      "id": 3,
+      "title": "almafa",
+      "text": "almafa almafa\nalmafa",
+      "uploaded": "20251108T154602",
+      "relevant_until": "2024-10-10T00:00:00"
+    }
+  ],
+  "normal": [
+    {
+      "id": 1,
+      "title": "Adventi vásár Budakeszin",
+      "text": "🎨✨ Kézműves csodák és adventi hangulat vár Budakeszin! 🎄\nKözeleg az advent – és ezzel együtt a 11. Kreatív Alkotóműhely és Börze! 💫\nIdén új helyszínen, Budakeszi központjában, a KesziKultban várunk minden alkotni szerető családot és vásárlót!\n👉 Kiállítóink és alkotóink nevét, elérhetőségét megtalálják az alábbi posztban!",
+      "link": "https://www.facebook.com/kreativborze/posts/pfbid02MxjTbJvi9tjRSPete4JBwVY24zFefpaeUPx2QkLnFAHkCfWQdR8Nakg74Qi1DqN4l",
+      "uploaded": "2025-11-07T20:40:30",
+      "relevant_until": "2025-11-17T00:00:00"
+    },
+    {
+      "id": 2,
+      "title": "almafa",
+      "text": "almafa almafa\nalmafa",
+      "uploaded": "20251108T154610",
+      "relevant_until": "2024-10-10T00:00:00"
+    }
+  ]
+}
